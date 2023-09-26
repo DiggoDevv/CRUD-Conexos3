@@ -1,3 +1,4 @@
+//faz a configuração do banco de dados
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv"
 

@@ -1,6 +1,7 @@
+//onde vai trabalhar com o modelo
 import Order from "../model/orderModel";
 
-class conexosRepository{
+class ConexosRepository{
     async create(conexosData){
     return await Order.create(conexosData);
     }
@@ -15,8 +16,15 @@ class conexosRepository{
 
     async update(id, conexosData) {
         return await Order.update(conexosData, { where: {id: id}});
-    //update recebe automobileData e recebe o objeto que vai ser usado para atualizar
-    //ou seja vai buscar o usuario com esse id e atualizar ele no automobileData
     }
-    async
+
+    async delete(id) {
+        return await Order.destroy({
+            where: {
+                id: id,
+            },
+        });
+    }
 }
+
+export default new ConexosRepository
