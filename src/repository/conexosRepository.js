@@ -15,7 +15,11 @@ class ConexosRepository{
     }
 
     async update(id, conexosData) {
-        return await Order.update(conexosData, { where: {id: id}});
+        return await Order.update(conexosData, 
+            { 
+                returning: true,
+                where: {id: id}
+            });
     }
 
     async delete(id) {
