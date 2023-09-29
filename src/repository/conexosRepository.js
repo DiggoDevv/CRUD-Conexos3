@@ -1,5 +1,5 @@
 //onde vai trabalhar com o modelo
-import Order from "../model/orderModel";
+import Order from "../model/orderModel.js";
 
 class ConexosRepository{
     async create(conexosData){

@@ -1,5 +1,5 @@
 //responsavel pela comunicação entre a camada view/front-end/postman e model
-import conexosRepository from "../repository/conexosRepository";
+import conexosRepository from "../repository/conexosRepository.js";
 
 class ConexosController{
     async create(req, res){

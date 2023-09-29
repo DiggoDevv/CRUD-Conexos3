@@ -1,5 +1,5 @@
 import express from "express";
-import conexosController from "../controller/conexosController";
+import conexosController from "../controller/conexosController.js";
 
 const router = express.Router();
 

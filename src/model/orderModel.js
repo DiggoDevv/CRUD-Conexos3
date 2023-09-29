@@ -1,6 +1,6 @@
 //cria o modelo do banco de dados
 import {Sequelize} from "sequelize";
-import db from "../config/db";
+import db from "../config/db.js";
 
 const Order = db.define("order", {
     id: {
@@ -13,7 +13,7 @@ const Order = db.define("order", {
         allowNull: false,
     },
     cpf: {
-        type:Sequelize.INTEGER.UNSIGNED(15),
+        type:Sequelize.INTEGER(15).UNSIGNED,
         allowNull: false,
     },
     telefone:{
