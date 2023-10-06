@@ -1,4 +1,5 @@
 //onde vai trabalhar com o modelo
+<<<<<<< HEAD
 // import Order from "../model/orderModel.js";
 
 // class ConexosRepository{

@@ -92,32 +92,6 @@ class ConexosController{
             res.status(500).json({ error: error.message })
         }
     }
-
-    // async login(req, res) {
-    //     try {
-    //         const {accessCode, password} = req.body;
-
-    //         const employee = employeeRepository.getOne({
-    //             where: { id: accessCode }
-    //         })
-
-    //         if (employee && (await bcrypt.compare(password, employe.password))) {
-    //             const token = jwt.sign(
-    //                 { employeeId: employee.id },
-    //                 process.env.TOKEN_KEY,
-    //                 {
-    //                     expiresIn: "5h",
-    //                 }
-    //             );
-
-    //             return res.status(200).json({ token: token })
-    //         }
-
-    //         res.status(400).json({ error: "Credenciais inválidas. "})
-    //     } catch (error) {
-    //         res.status(500).json({ error: error.message})
-    //     }
-    // }
 }
 
 export default new ConexosController();
