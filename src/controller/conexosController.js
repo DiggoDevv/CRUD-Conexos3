@@ -59,19 +59,20 @@ class ConexosController{
     async update(req, res){
         try {
             const{id}=req.params;
-            const{nome, cpf, telefone, email, horario, status} = req.body;
+            const{nome, cpf, telefone, email, plano, horario, status} = req.body;
             const[updateOrder]= await Order.update({
-                nome, cpf, telefone, email, horario, status }, {
+                nome, cpf, telefone, email, plano, horario, status }, {
                     where:{id}
                 });
-            if (!updateOrder) {
-                return res.status(404).json({ error: "Cliente não encontrado" });       
-            }  
-            if(affectedRows === 0){
-                return res.status(500).json({
-                    error: `Não foi possivel atualizar o formulario com id: ${req.params.id}`,
-                })
-            };
+            if (updateOrder === 0) return res.status(404).json({messege: 'Pedido não encontrado'});
+            res.json("Pedido atualizado com sucesso!");
+            // if (!updateOrder) {
+            //     return res.status(404).json({ error: "Cliente não encontrado" });       
+            // }  
+            // if(affectedRows === 0){
+            //     return res.status(500).json({
+            //         error: `Não foi possivel atualizar o formulario com id: ${req.params.id}`,
+            //     })
 
         } catch (error) {
             res.status(500).json({ erro: error.message });
