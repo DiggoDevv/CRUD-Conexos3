@@ -1,7 +1,7 @@
 //fazemos a inicialização daquilo que prcisamos para nossa api funcionar
 //no caso o banco de dados e a aplicação
-import app from "./app.js"
-import db from "./config/db.js"
+import app from "./src/app.js"
+import db from "./src/config/db.js"
 import dotenv from "dotenv"
 
 dotenv.config();
