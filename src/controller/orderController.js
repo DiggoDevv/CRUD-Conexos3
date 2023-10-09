@@ -5,7 +5,7 @@ import Order from "../model/orderModel.js";
 // import bcrypt from "bcryptjs";
 // import jwt from "jsonwebtoken";
 
-class ConexosController{
+class OrderController{
     async create(req, res){
         try {
             const{nome, cpf, telefone, email, plano, horario, status} = req.body;
@@ -95,4 +95,4 @@ class ConexosController{
     }
 }
 
-export default new ConexosController();
+export default new OrderController();
